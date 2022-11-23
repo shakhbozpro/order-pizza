@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="css/styles.css"> -->
+  <link rel="stylesheet" href="css/styles.min.css">
+  <title>Order Pizza</title>
+</head>
+
+<body>
+
+  <main>
+    <section>
+      <div class="container">
+        <div class="ordering-wrapper d-md-flex justify-content-md-between align-items-md-start py-3">
+          <form class="order-form mx-auto mb-5 py-4 px-5 text-white rounded-3 mx-md-0 me-md-3 mb-md-0"
+            action="https://echo.htmlacademy.ru/courses" autocomplete="off" method="POST">
+            <h2 class="mb-4 text-center">Pizza order</h2>
+
+            <input class="user-name d-block w-100 p-3 fw-lighter text-white bg-transparent border-0 border-bottom"
+              type="text" name="user_name" placeholder="User name" required>
+            <input class="user-tel-number d-block w-100 p-3 fw-lighter text-white bg-transparent border-0 border-bottom"
+              type="number" name="user_tel-num" placeholder="Phone number" required>
+            <input
+              class="user-address d-block w-100 mb-4 p-3 fw-lighter text-white bg-transparent border-0 border-bottom"
+              type="text" name="user_address" placeholder="User address" required>
+
+            <!-- Dough thickness bo'limi -->
+            <div class="d-flex justify-content-between align-items-center mb-5">
+              <strong class="me-3 fw-normal">Dough thickness:</strong>
+
+              <select class="thickness-select p-2 text-white bg-transparent border-0 border-bottom"
+                id="thickness-select" name="pizza_thickness">
+                <option value="" selected disabled hidden>Pizza size</option>
+                <option class="thickness-option" data-price="10">Thin</option>
+                <option class="thickness-option" data-price="12">Medium</option>
+                <option class="thickness-option" data-price="15">Thick</option>
+              </select>
+            </div>
+
+            <!-- Size bo'limi -->
+            <ul class="d-flex justify-content-between align-items-center list-unstyled">
+              <li>
+                <strong>Size:</strong>
+              </li>
+
+              <li>
+                <input class="pizza-size" id="size-25sm" type="radio" value="sm25" name="pizza_size" checked>
+                <label class="pizza-size-label d-flex flex-column justify-content-center align-items-center"
+                  for="size-25sm">25sm</label>
+              </li>
+
+              <li>
+                <input class="pizza-size" id="size-30sm" type="radio" value="sm30" name="pizza_size">
+                <label class="pizza-size-label d-flex flex-column justify-content-center align-items-center"
+                  for="size-30sm">30sm</label>
+              </li>
+
+              <li>
+                <input class="pizza-size" id="size-35" type="radio" value="sm35" name="pizza_size">
+                <label class="pizza-size-label d-flex flex-column justify-content-center align-items-center"
+                  for="size-35">35sm</label>
+              </li>
+            </ul>
+
+            <!-- On Pizza bo'limi -->
+            <div>
+              <strong class="d-block mb-2 text-capitalize">On pizza:</strong>
+
+              <div class="d-flex justify-content-between">
+                <ul class="list-unstyled">
+                  <li class="mb-3">
+                    <label>
+                      <input class="on-pizza me-2" type="checkbox" name="addings" value="Tomato">
+                      <span>Tomato</span>
+                    </label>
+                  </li>
+
+                  <li class="mb-3">
+                    <label>
+                      <input class="on-pizza me-2" type="checkbox" name="addings" value="Turkey meat">
+                      <span>Turkey meat</span>
+                    </label>
+                  </li>
+
+                  <li>
+                    <label>
+                      <input class="on-pizza me-2" type="checkbox" name="addings" value="Olive">
+                      <span>Olive</span>
+                    </label>
+                  </li>
+                </ul>
+
+                <ul class="list-unstyled">
+                  <li class="mb-3">
+                    <label>
+                      <input class="on-pizza me-2" type="checkbox" name="addings" value="Pickled">
+                      <span>Pickled</span>
+                    </label>
+                  </li>
+
+                  <li class="mb-3">
+                    <label>
+                      <input class="on-pizza me-2" type="checkbox" name="addings" value="Mushroom">
+                      <span>Mushroom</span>
+                    </label>
+                  </li>
+
+                  <li>
+                    <label>
+                      <input class="on-pizza me-2" type="checkbox" name="addings" value="Horse meat">
+                      <span>Horse meat</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Add bo'limi -->
+            <div class="mb-5">
+              <strong class="d-block mb-2">Add:</strong>
+              <ul class="d-flex align-items-center list-unstyled">
+                <li class="d-flex align-items-center me-5">
+                  <label>
+                    <input class="add-to-pizza me-2" type="checkbox" name="add" value="Pepper">
+                    <span>Pepper</span>
+                  </label>
+                </li>
+
+                <li class="d-flex align-items-center me-5">
+                  <label>
+                    <input class="add-to-pizza me-2" type="checkbox" name="add" value="Sausages">
+                    <span>Sausages</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <button class="order-btn d-block mx-auto py-3 px-5 fw-semibold border-0 rounded-5"
+              type="submit">Save</button>
+          </form>
+
+          <ul class="data-list list-unstyled mb-0"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <!-- <script src="js/main copy.js"></script> -->
+</body>
+
+</html>
